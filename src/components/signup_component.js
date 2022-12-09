@@ -32,8 +32,14 @@ export default class SignUp extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "userRegister");
-      });
+
+    if(data) {
+      alert("User successfully registered") 
+      window.location.href='./sign-in';
+      }     
+});
+    
+
   }
   render() {
     return (
@@ -51,7 +57,7 @@ export default class SignUp extends Component {
         </div>
 
         <div className="mb-3">
-          <label>Student Class</label>
+          <label>Student Class </label>
           <input
             type="text"
             className="form-control"
